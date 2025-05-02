@@ -1,4 +1,4 @@
-{lib, pkgs, ...}: let
+{pkgs, ...}: let
   testPackage = pkgs.writeScriptBin "hi" "echo ${pkgs.lib.testString}";
 
   overlay = final: prev: prev.lib.attrsets.recursiveUpdate prev {
